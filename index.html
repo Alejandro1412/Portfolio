@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Alejandro Polanco Andrade — Tech Lead & Systems Engineer">
+<title>Alejandro Polanco Andrade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ CUSTOM CURSOR ══ -->
+<div id="cursor-dot"></div>
+<div id="cursor-trail"></div>
+
+<!-- ══ ANTIGRAVITY PARTICLES ══ -->
+<canvas id="hero-canvas"></canvas>
+
+<!-- ══ LANGUAGE TOGGLE ══ -->
+<button id="lang-toggle" aria-label="Toggle language">
+  <span class="lang-es">ES</span>
+  <span class="divider">/</span>
+  <span class="lang-en">EN</span>
+</button>
+
+<!-- ══ NAVIGATION ══ -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <span class="logo-bracket">[</span>APA<span class="logo-bracket">]</span>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about" data-key="nav_about">Sobre mí</a></li>
+    <li><a href="#skills" data-key="nav_skills">Skills</a></li>
+    <li><a href="#experience" data-key="nav_experience">Experiencia</a></li>
+    <li><a href="#projects" data-key="nav_projects">Proyectos</a></li>
+    <li><a href="#contact" data-key="nav_contact">Contacto</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════════════════════════ -->
+<!-- HERO                                   -->
+<!-- ══════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-noise"></div>
+
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="tag-dot"></span>
+      <span data-key="hero_available">Disponible para proyectos</span>
+    </div>
+
+    <h1 class="hero-name">
+      <div class="name-line overflow-hidden"><span class="slide-in" style="--d:.1s">Alejandro</span></div>
+      <div class="name-line overflow-hidden"><span class="slide-in accent-stroke" style="--d:.25s">Polanco</span></div>
+      <div class="name-line overflow-hidden"><span class="slide-in" style="--d:.4s">Andrade</span></div>
+    </h1>
+
+    <div class="hero-meta">
+      <div class="hero-role fade-in" style="--d:.7s">
+        <span class="role-text" data-key="hero_role">Tech Lead & Ingeniero de Sistemas</span>
+        <span class="role-years">10+ <span data-key="hero_years">años</span></span>
+      </div>
+      <div class="hero-cta fade-in" style="--d:.9s">
+        <a href="#projects" class="btn-primary">
+          <span data-key="hero_cta1">Ver proyectos</span>
+          <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        </a>
+        <a href="#contact" class="btn-ghost" data-key="hero_cta2">Hablemos</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-indicator fade-in" style="--d:1.2s">
+    <div class="scroll-line"></div>
+    <span data-key="hero_scroll">scroll</span>
+  </div>
+
+  <div class="hero-stats fade-in" style="--d:1s">
+    <div class="hstat">
+      <span class="hstat-n" data-count="10" data-suffix="+">0</span>
+      <span class="hstat-l" data-key="stat_years">años exp.</span>
+    </div>
+    <div class="hstat-divider"></div>
+    <div class="hstat">
+      <span class="hstat-n" data-count="60" data-suffix="+">0</span>
+      <span class="hstat-l" data-key="stat_projects">proyectos</span>
+    </div>
+    <div class="hstat-divider"></div>
+    <div class="hstat">
+      <span class="hstat-n" data-count="9" data-suffix="">0</span>
+      <span class="hstat-l" data-key="stat_industries">industrias</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MARQUEE ══ -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-inner" id="marquee-inner">
+      <span data-key="m_banking">Banca</span><span class="sep">✦</span>
+      <span data-key="m_ai">Inteligencia Artificial</span><span class="sep">✦</span>
+      <span data-key="m_mobility">Movilidad</span><span class="sep">✦</span>
+      <span data-key="m_construction">Construcción</span><span class="sep">✦</span>
+      <span data-key="m_games">Videojuegos</span><span class="sep">✦</span>
+      <span data-key="m_health">Salud</span><span class="sep">✦</span>
+      <span data-key="m_gov">Gobierno</span><span class="sep">✦</span>
+      <span data-key="m_energy">Energía</span><span class="sep">✦</span>
+      <span data-key="m_banking">Banca</span><span class="sep">✦</span>
+      <span data-key="m_ai">Inteligencia Artificial</span><span class="sep">✦</span>
+      <span data-key="m_mobility">Movilidad</span><span class="sep">✦</span>
+      <span data-key="m_construction">Construcción</span><span class="sep">✦</span>
+      <span data-key="m_games">Videojuegos</span><span class="sep">✦</span>
+      <span data-key="m_health">Salud</span><span class="sep">✦</span>
+      <span data-key="m_gov">Gobierno</span><span class="sep">✦</span>
+      <span data-key="m_energy">Energía</span><span class="sep">✦</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<!-- ABOUT                                  -->
+<!-- ══════════════════════════════════════ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-label reveal-up">
+      <span class="label-line"></span>
+      <span data-key="about_label">Sobre mí</span>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-left">
+        <h2 class="section-title reveal-up">
+          <span data-key="about_title1">El ingeniero que</span><br>
+          <em data-key="about_title2">construye lo imposible.</em>
+        </h2>
+        <div class="about-text reveal-up">
+          <p data-key="about_p1">Soy <strong>Alejandro Polanco Andrade</strong>, Ingeniero de Sistemas Informáticos con más de una década liderando equipos en industrias críticas. Transformo visiones de negocio en arquitecturas técnicas que escalan.</p>
+          <p data-key="about_p2">He diseñado sistemas que mueven millones de transacciones, entrenado modelos de IA en producción, y liderado equipos de alto rendimiento distribuidos en múltiples países.</p>
+          <p data-key="about_p3">Mi filosofía: el código de calidad es el que sobrevive, y la arquitectura elegante es la que nadie nota porque simplemente <em>funciona</em>.</p>
+        </div>
+        <div class="about-tags reveal-up">
+          <span class="chip">System Design</span>
+          <span class="chip">Tech Leadership</span>
+          <span class="chip">Distributed Systems</span>
+          <span class="chip">Mentoring</span>
+          <span class="chip">Agile / Scrum</span>
+          <span class="chip">API Architecture</span>
+          <span class="chip">DevOps Culture</span>
+          <span class="chip">MLOps</span>
+        </div>
+      </div>
+
+      <div class="about-right reveal-right">
+        <div class="about-card-featured">
+          <div class="acf-glow"></div>
+          <div class="acf-header">
+            <span class="acf-tag" data-key="acf_tag">// Perfil técnico</span>
+          </div>
+          <div class="acf-stats">
+            <div class="acf-stat">
+              <div class="acf-stat-val">10<span>+</span></div>
+              <div class="acf-stat-label" data-key="acf_s1">Años liderando equipos</div>
+              <div class="acf-bar"><div class="acf-bar-fill" style="--w:100%"></div></div>
+            </div>
+            <div class="acf-stat">
+              <div class="acf-stat-val">20<span>+</span></div>
+              <div class="acf-stat-label" data-key="acf_s2">Ingenieros mentoreados</div>
+              <div class="acf-bar"><div class="acf-bar-fill" style="--w:90%"></div></div>
+            </div>
+            <div class="acf-stat">
+              <div class="acf-stat-val">9</div>
+              <div class="acf-stat-label" data-key="acf_s3">Industrias dominadas</div>
+              <div class="acf-bar"><div class="acf-bar-fill" style="--w:95%"></div></div>
+            </div>
+          </div>
+          <div class="acf-pillars">
+            <div class="pillar" data-key="pillar1">Arquitectura</div>
+            <div class="pillar" data-key="pillar2">Liderazgo</div>
+            <div class="pillar" data-key="pillar3">Innovación</div>
+            <div class="pillar" data-key="pillar4">Escalabilidad</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- SKILLS                                 -->
+<!-- ══════════════════════════════════════ -->
+<section id="skills" class="section section-dark">
+  <div class="skills-bg-word" aria-hidden="true">SKILLS</div>
+  <div class="container">
+    <div class="section-label reveal-up">
+      <span class="label-line"></span>
+      <span data-key="skills_label">Arsenal técnico</span>
+    </div>
+    <h2 class="section-title reveal-up" data-key="skills_title">Stack tecnológico.</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-card reveal-up" data-delay="0">
+        <div class="sk-top">
+          <span class="sk-emoji">🏗️</span>
+          <span class="sk-num">01</span>
+        </div>
+        <h3 class="sk-name" data-key="sk1_name">Arquitectura de Software</h3>
+        <div class="sk-meter">
+          <div class="sk-meter-fill" data-w="96"></div>
+          <span class="sk-pct">96%</span>
+        </div>
+        <div class="sk-tags">
+          <span>Microservices</span><span>DDD</span><span>Event-Driven</span>
+          <span>CQRS</span><span>Hexagonal</span><span>SAGA</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal-up" data-delay="80">
+        <div class="sk-top">
+          <span class="sk-emoji">☁️</span>
+          <span class="sk-num">02</span>
+        </div>
+        <h3 class="sk-name" data-key="sk2_name">Cloud & DevOps</h3>
+        <div class="sk-meter">
+          <div class="sk-meter-fill" data-w="94"></div>
+          <span class="sk-pct">94%</span>
+        </div>
+        <div class="sk-tags">
+          <span>AWS</span><span>GCP</span><span>Azure</span>
+          <span>Kubernetes</span><span>Terraform</span><span>CI/CD</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal-up" data-delay="160">
+        <div class="sk-top">
+          <span class="sk-emoji">🤖</span>
+          <span class="sk-num">03</span>
+        </div>
+        <h3 class="sk-name">AI / ML Engineering</h3>
+        <div class="sk-meter">
+          <div class="sk-meter-fill" data-w="88"></div>
+          <span class="sk-pct">88%</span>
+        </div>
+        <div class="sk-tags">
+          <span>LLMs</span><span>MLOps</span><span>RAG</span>
+          <span>PyTorch</span><span>TensorFlow</span><span>Langchain</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal-up" data-delay="240">
+        <div class="sk-top">
+          <span class="sk-emoji">⚛️</span>
+          <span class="sk-num">04</span>
+        </div>
+        <h3 class="sk-name" data-key="sk4_name">Frontend Avanzado</h3>
+        <div class="sk-meter">
+          <div class="sk-meter-fill" data-w="91"></div>
+          <span class="sk-pct">91%</span>
+        </div>
+        <div class="sk-tags">
+          <span>React</span><span>Next.js</span><span>TypeScript</span>
+          <span>Three.js</span><span>WebGL</span><span>GSAP</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal-up" data-delay="320">
+        <div class="sk-top">
+          <span class="sk-emoji">🔧</span>
+          <span class="sk-num">05</span>
+        </div>
+        <h3 class="sk-name" data-key="sk5_name">Backend & APIs</h3>
+        <div class="sk-meter">
+          <div class="sk-meter-fill" data-w="97"></div>
+          <span class="sk-pct">97%</span>
+        </div>
+        <div class="sk-tags">
+          <span>Node.js</span><span>Go</span><span>Python</span>
+          <span>Java</span><span>GraphQL</span><span>gRPC</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal-up" data-delay="400">
+        <div class="sk-top">
+          <span class="sk-emoji">🗄️</span>
+          <span class="sk-num">06</span>
+        </div>
+        <h3 class="sk-name" data-key="sk6_name">Datos & Streaming</h3>
+        <div class="sk-meter">
+          <div class="sk-meter-fill" data-w="92"></div>
+          <span class="sk-pct">92%</span>
+        </div>
+        <div class="sk-tags">
+          <span>PostgreSQL</span><span>MongoDB</span><span>Kafka</span>
+          <span>Redis</span><span>Elasticsearch</span><span>Spark</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- EXPERIENCE                             -->
+<!-- ══════════════════════════════════════ -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-label reveal-up">
+      <span class="label-line"></span>
+      <span data-key="exp_label">Trayectoria profesional</span>
+    </div>
+    <h2 class="section-title reveal-up" data-key="exp_title">10 años.<br><em data-key="exp_title2">8 industrias.</em></h2>
+
+    <div class="timeline">
+
+      <div class="tl-item reveal-left">
+        <div class="tl-marker">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-head">
+            <div>
+              <div class="tl-company">NeoBanco Digital</div>
+              <div class="tl-role" data-key="exp1_role">Tech Lead · Core Banking Platform</div>
+            </div>
+            <div class="tl-right">
+              <span class="tl-period">2022 — <span data-key="present">Presente</span></span>
+              <span class="tl-badge badge-bank" data-key="badge_bank">🏦 Banca</span>
+            </div>
+          </div>
+          <p class="tl-desc" data-key="exp1_desc">Lideré migración monolítico → microservicios procesando <strong>+2M transacciones/día</strong>. Arquitectura de pagos tiempo real sub-100ms. Equipo de <strong>18 ingenieros</strong> en 3 países.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal-left" style="--tl-delay:.1s">
+        <div class="tl-marker">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-head">
+            <div>
+              <div class="tl-company">TechVision AI Labs</div>
+              <div class="tl-role" data-key="exp2_role">Senior Software Architect · AI Products</div>
+            </div>
+            <div class="tl-right">
+              <span class="tl-period">2020 — 2022</span>
+              <span class="tl-badge badge-ai" data-key="badge_ai">🤖 AI</span>
+            </div>
+          </div>
+          <p class="tl-desc" data-key="exp2_desc">Plataforma MLOps que redujo despliegue de modelos de <strong>3 semanas → 4 horas</strong>. Pipelines de datos para LLMs y visión por computador en manufactura.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal-left" style="--tl-delay:.2s">
+        <div class="tl-marker">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-head">
+            <div>
+              <div class="tl-company">MoveX Mobility</div>
+              <div class="tl-role" data-key="exp3_role">Lead Engineer · Fleet Management</div>
+            </div>
+            <div class="tl-right">
+              <span class="tl-period">2018 — 2020</span>
+              <span class="tl-badge badge-mob" data-key="badge_mob">🚗 Movilidad</span>
+            </div>
+          </div>
+          <p class="tl-desc" data-key="exp3_desc">Sistema tiempo real para <strong>+50,000 vehículos</strong> conectados. Optimización de rutas con <strong>−23% costos operativos</strong> mediante algoritmos ML.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal-left" style="--tl-delay:.3s">
+        <div class="tl-marker">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-head">
+            <div>
+              <div class="tl-company">BIM Construct Tech</div>
+              <div class="tl-role" data-key="exp4_role">Full Stack Lead · BIM Platform</div>
+            </div>
+            <div class="tl-right">
+              <span class="tl-period">2017 — 2018</span>
+              <span class="tl-badge badge-build" data-key="badge_build">🏗️ Construcción</span>
+            </div>
+          </div>
+          <p class="tl-desc" data-key="exp4_desc">Plataforma BIM colaborativa con WebGL 3D rendering. Integración AutoCAD, Revit, IoT. Adoptada por <strong>3 top-10 constructoras LATAM</strong>.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal-left" style="--tl-delay:.4s">
+        <div class="tl-marker">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-head">
+            <div>
+              <div class="tl-company">StormPixel Games</div>
+              <div class="tl-role" data-key="exp5_role">Backend Architect · Multiplayer</div>
+            </div>
+            <div class="tl-right">
+              <span class="tl-period">2016 — 2017</span>
+              <span class="tl-badge badge-game" data-key="badge_game">🎮 Games</span>
+            </div>
+          </div>
+          <p class="tl-desc" data-key="exp5_desc">Infraestructura para <strong>+200,000 jugadores concurrentes</strong>. Matchmaking inteligente, economía virtual y sistema anti-cheat distribuido.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal-left" style="--tl-delay:.5s">
+        <div class="tl-marker">
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-content">
+          <div class="tl-head">
+            <div>
+              <div class="tl-company">GovTech + MediCore + EnergiaSmart</div>
+              <div class="tl-role" data-key="exp6_role">Software Engineer (múltiples roles)</div>
+            </div>
+            <div class="tl-right">
+              <span class="tl-period">2013 — 2016</span>
+              <div style="display:flex;gap:.4rem;flex-wrap:wrap">
+                <span class="tl-badge badge-gov" data-key="badge_gov">🏛️ Gov</span>
+                <span class="tl-badge badge-health" data-key="badge_health">🏥 Salud</span>
+                <span class="tl-badge badge-energy" data-key="badge_energy">⚡ Energía</span>
+              </div>
+            </div>
+          </div>
+          <p class="tl-desc" data-key="exp6_desc">Digitalización ciudadana (+5M usuarios), plataforma clínica HL7 FHIR con telemedicina, y sistemas SCADA para redes eléctricas inteligentes.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- PROJECTS                               -->
+<!-- ══════════════════════════════════════ -->
+<section id="projects" class="section section-dark">
+  <div class="container">
+    <div class="section-label reveal-up">
+      <span class="label-line"></span>
+      <span data-key="proj_label">Proyectos destacados</span>
+    </div>
+    <h2 class="section-title reveal-up" data-key="proj_title">Código que<br><em data-key="proj_title2">mueve el mundo.</em></h2>
+
+    <!-- ROW 1: Full-width featured -->
+    <div class="proj-featured reveal-up">
+      <div class="proj-feat-img">
+        <img
+          src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&q=80&fit=crop"
+          alt="AI LLM Platform"
+          loading="lazy"
+        />
+        <div class="proj-feat-overlay">
+          <span class="proj-feat-badge" data-key="pf1_badge">AI · LLM · Enterprise</span>
+        </div>
+      </div>
+      <div class="proj-feat-info">
+        <div class="proj-num">01</div>
+        <h3 class="proj-title" data-key="pf1_title">NeuralCore — Enterprise LLM Platform</h3>
+        <p class="proj-desc" data-key="pf1_desc">Plataforma propietaria de LLMs empresariales con RAG, fine-tuning automatizado y observabilidad completa. Procesando +50M tokens/día para clientes Fortune 500. Pipeline de evaluación continua con detección de alucinaciones y drift de modelos en tiempo real.</p>
+        <div class="proj-metrics">
+          <div class="metric"><span class="metric-val">50M+</span><span class="metric-label" data-key="tokens_day">tokens/día</span></div>
+          <div class="metric"><span class="metric-val">99.9%</span><span class="metric-label" data-key="uptime">uptime</span></div>
+          <div class="metric"><span class="metric-val">&lt;200ms</span><span class="metric-label" data-key="latency">latencia p95</span></div>
+        </div>
+        <div class="proj-stack-row">
+          <span>Python</span><span>LangChain</span><span>Kubernetes</span><span>Ray</span><span>GCP</span><span>PostgreSQL</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2: grid 2 cols -->
+    <div class="proj-grid-2">
+
+      <div class="proj-card reveal-left">
+        <div class="proj-card-img">
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80&fit=crop"
+            alt="Fleet Management Dashboard"
+            loading="lazy"
+          />
+          <div class="proj-card-overlay"></div>
+          <span class="proj-card-badge badge-mob" data-key="pc2_badge">🚗 Movilidad</span>
+        </div>
+        <div class="proj-card-body">
+          <div class="proj-num">02</div>
+          <h3 class="proj-title" data-key="pc2_title">FleetOS — 50K Vehicles</h3>
+          <p class="proj-desc" data-key="pc2_desc">Sistema de gestión de flotas en tiempo real. Telemetría, GPS, optimización de rutas con ML y alertas predictivas de mantenimiento.</p>
+          <div class="proj-stack-row">
+            <span>Node.js</span><span>React</span><span>WebSockets</span><span>MongoDB</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal-right">
+        <div class="proj-card-img">
+          <img
+            src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=700&q=80&fit=crop"
+            alt="Payment Engine"
+            loading="lazy"
+          />
+          <div class="proj-card-overlay"></div>
+          <span class="proj-card-badge badge-bank" data-key="pc3_badge">🏦 Banca</span>
+        </div>
+        <div class="proj-card-body">
+          <div class="proj-num">03</div>
+          <h3 class="proj-title" data-key="pc3_title">NeoCore Payment Engine</h3>
+          <p class="proj-desc" data-key="pc3_desc">Motor de pagos en tiempo real con 2M+ transacciones/día, reconciliación automática y fraud detection con ML.</p>
+          <div class="proj-stack-row">
+            <span>Go</span><span>Kafka</span><span>PostgreSQL</span><span>Redis</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW 3: grid 3 cols AI-focused -->
+    <div class="proj-grid-3">
+
+      <div class="proj-card-sm reveal-up" data-delay="0">
+        <div class="proj-sm-img">
+          <img
+            src="https://images.unsplash.com/photo-1716461257083-a3b1de517e15?w=500&q=80&fit=crop"
+            alt="Computer Vision"
+            loading="lazy"
+          />
+          <div class="proj-card-overlay"></div>
+        </div>
+        <div class="proj-card-body">
+          <span class="proj-card-badge badge-ai" style="position:static;display:inline-block;margin-bottom:.75rem" data-key="pc4_badge">🤖 AI / Visión</span>
+          <div class="proj-num">04</div>
+          <h3 class="proj-title" data-key="pc4_title">VisionGuard QA</h3>
+          <p class="proj-desc" data-key="pc4_desc">Sistema de visión computacional para control de calidad industrial. Detecta defectos en línea de producción con 99.2% precisión a 30fps.</p>
+          <div class="proj-stack-row">
+            <span>PyTorch</span><span>YOLO</span><span>FastAPI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card-sm reveal-up" data-delay="100">
+        <div class="proj-sm-img">
+          <img
+            src="https://images.unsplash.com/photo-1686191128892-3b37add4c844?w=500&q=80&fit=crop"
+            alt="AI Chat Assistant"
+            loading="lazy"
+          />
+          <div class="proj-card-overlay"></div>
+        </div>
+        <div class="proj-card-body">
+          <span class="proj-card-badge badge-ai" style="position:static;display:inline-block;margin-bottom:.75rem" data-key="pc5_badge">🧠 AI / NLP</span>
+          <div class="proj-num">05</div>
+          <h3 class="proj-title" data-key="pc5_title">MedAssist AI</h3>
+          <p class="proj-desc" data-key="pc5_desc">Asistente clínico con LLM fine-tuneado en literatura médica. Soporte a diagnósticos, resúmenes de historias clínicas y alertas de interacciones farmacológicas.</p>
+          <div class="proj-stack-row">
+            <span>OpenAI</span><span>FastAPI</span><span>FHIR</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card-sm reveal-up" data-delay="200">
+        <div class="proj-sm-img">
+          <img
+            src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&q=80&fit=crop"
+            alt="3D Game Architecture"
+            loading="lazy"
+          />
+          <div class="proj-card-overlay"></div>
+        </div>
+        <div class="proj-card-body">
+          <span class="proj-card-badge badge-game" style="position:static;display:inline-block;margin-bottom:.75rem" data-key="pc6_badge">🎮 Games</span>
+          <div class="proj-num">06</div>
+          <h3 class="proj-title" data-key="pc6_title">GameServer Infra</h3>
+          <p class="proj-desc" data-key="pc6_desc">Backend para 200K+ jugadores simultáneos. Matchmaking inteligente con ELO adaptativo, anti-cheat distribuido y economía virtual.</p>
+          <div class="proj-stack-row">
+            <span>C++</span><span>AWS ECS</span><span>Redis</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ROW 4: full-width AI project -->
+    <div class="proj-featured proj-featured-reverse reveal-up">
+      <div class="proj-feat-img">
+        <img
+          src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&q=80&fit=crop"
+          alt="Autonomous AI Agent Platform"
+          loading="lazy"
+        />
+        <div class="proj-feat-overlay">
+          <span class="proj-feat-badge" data-key="pf7_badge">AI Agents · Autonomy · LLM</span>
+        </div>
+      </div>
+      <div class="proj-feat-info">
+        <div class="proj-num">07</div>
+        <h3 class="proj-title" data-key="pf7_title">AgentOS — Plataforma de Agentes Autónomos</h3>
+        <p class="proj-desc" data-key="pf7_desc">Framework multi-agente para automatización de workflows empresariales complejos. Orquestación de agentes AI con memoria persistente, herramientas personalizadas y guardrails de seguridad. Reducción del 70% en tiempo de procesos operativos.</p>
+        <div class="proj-metrics">
+          <div class="metric"><span class="metric-val">70%</span><span class="metric-label" data-key="time_saved">tiempo ahorrado</span></div>
+          <div class="metric"><span class="metric-val">12</span><span class="metric-label" data-key="agent_types">tipos de agente</span></div>
+          <div class="metric"><span class="metric-val">1M+</span><span class="metric-label" data-key="tasks_month">tareas/mes</span></div>
+        </div>
+        <div class="proj-stack-row">
+          <span>LangGraph</span><span>OpenAI</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- NUMBERS                               -->
+<!-- ══════════════════════════════════════ -->
+<section id="numbers" class="section numbers-section">
+  <div class="numbers-bg-canvas" id="numbers-canvas-wrap">
+    <canvas id="numbers-canvas"></canvas>
+  </div>
+  <div class="container">
+    <div class="numbers-grid">
+      <div class="num-block reveal-up" data-delay="0">
+        <div class="num-value" data-count="10" data-suffix="+">0</div>
+        <div class="num-label" data-key="num1">Años de experiencia</div>
+      </div>
+      <div class="num-block reveal-up" data-delay="100">
+        <div class="num-value" data-count="60" data-suffix="+">0</div>
+        <div class="num-label" data-key="num2">Proyectos en producción</div>
+      </div>
+      <div class="num-block reveal-up" data-delay="200">
+        <div class="num-value" data-count="2" data-suffix="M+">0</div>
+        <div class="num-label" data-key="num3">Transacciones/día gestionadas</div>
+      </div>
+      <div class="num-block reveal-up" data-delay="300">
+        <div class="num-value" data-count="9" data-suffix="">0</div>
+        <div class="num-label" data-key="num4">Industrias</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- CONTACT                                -->
+<!-- ══════════════════════════════════════ -->
+<section id="contact" class="section contact-section">
+  <div class="contact-orb contact-orb-1"></div>
+  <div class="contact-orb contact-orb-2"></div>
+  <div class="container">
+    <div class="contact-inner">
+      <div class="section-label reveal-up" style="justify-content:center">
+        <span class="label-line"></span>
+        <span data-key="contact_label">Contacto</span>
+        <span class="label-line"></span>
+      </div>
+      <h2 class="contact-title reveal-up">
+        <span data-key="contact_title1">¿Tienes un</span><br>
+        <span class="contact-title-accent" data-key="contact_title2">reto difícil?</span>
+      </h2>
+      <p class="contact-sub reveal-up" data-key="contact_sub">
+        Desde arquitectura de sistemas hasta liderazgo técnico. Si necesitas a alguien que construya cosas que realmente funcionen a escala, hablemos.
+      </p>
+      <div class="contact-email reveal-up">
+        <a href="mailto:alejandro@polanco.dev" class="email-link">
+          <span class="email-icon">✉</span>
+          alejandro@polanco.dev
+        </a>
+      </div>
+      <div class="contact-socials reveal-up">
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener" class="social-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" class="social-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.7 5.5 4.4 9 4.5-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.7z"/></svg>
+          Twitter
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="container footer-inner">
+    <span class="footer-copy">© 2024 Alejandro Polanco Andrade</span>
+    <span class="footer-mid" data-key="footer_rights">Todos los derechos reservados</span>
+    <span class="footer-tag">Built with 🔥 & precision</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
