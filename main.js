@@ -180,9 +180,12 @@ document.getElementById('lang-toggle').addEventListener('click', () => {
 applyLang('es');
 
 
-// ══ CURSOR ══════════════════════════════════════════
+// ══ CURSOR (desktop only) ════════════════════════════
+const isTouchDevice = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 const cursorDot   = document.getElementById('cursor-dot');
 const cursorTrail = document.getElementById('cursor-trail');
+
+if (!isTouchDevice && cursorDot && cursorTrail) {
 let mouseX = -100, mouseY = -100;
 let trailX = -100, trailY = -100;
 
@@ -205,6 +208,7 @@ document.querySelectorAll(hoverEls).forEach(el => {
   el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
   el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
 });
+}
 
 
 // ══ HERO ANTIGRAVITY PARTICLE SYSTEM ════════════════
@@ -322,7 +326,21 @@ const blobs = [
   new Blob(0.85, 0.25, W * 0.40, 'rgba(80, 10,160,.07)',  'rgba(0,0,0,0)', 0.0035),
 ];
 
-const particles = Array.from({ length: 120 }, () => new AGParticle());
+function getParticleCount() {
+  if (window.innerWidth < 480) return 40;
+  if (window.innerWidth < 900) return 70;
+  if (window.innerWidth < 1440) return 100;
+  return 120;
+}
+
+let particles = Array.from({ length: getParticleCount() }, () => new AGParticle());
+
+window.addEventListener('resize', () => {
+  const count = getParticleCount();
+  if (particles.length !== count) {
+    particles = Array.from({ length: count }, () => new AGParticle());
+  }
+});
 
 // Stars (static-ish)
 const stars = Array.from({ length: 200 }, () => ({
@@ -478,6 +496,7 @@ let menuOpen   = false;
 burger.addEventListener('click', () => {
   menuOpen = !menuOpen;
   navLinks.classList.toggle('open', menuOpen);
+  document.body.style.overflow = menuOpen ? 'hidden' : '';
   // animate burger
   const spans = burger.querySelectorAll('span');
   if (menuOpen) {
@@ -493,6 +512,7 @@ navLinks.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => {
     menuOpen = false;
     navLinks.classList.remove('open');
+    document.body.style.overflow = '';
     burger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
   });
 });
@@ -559,7 +579,9 @@ const heroSection = document.getElementById('hero');
 if (heroSection) countersObs.observe(heroSection);
 
 
-// ══ 3D TILT ON CARDS ════════════════════════════════
+// ══ 3D TILT ON CARDS (desktop pointer only) ═══════════
+const enableTilt = !isTouchDevice && window.matchMedia('(min-width: 901px)').matches;
+if (enableTilt) {
 const tiltTargets = '.skill-card, .proj-card, .proj-card-sm, .proj-featured, .about-card-featured';
 document.querySelectorAll(tiltTargets).forEach(card => {
   card.addEventListener('mousemove', e => {
@@ -582,6 +604,7 @@ document.querySelectorAll(tiltTargets).forEach(card => {
     card.style.transition = 'transform .5s cubic-bezier(0.16,1,0.3,1), border-color .35s';
   });
 });
+}
 
 
 // ══ PARALLAX ON SCROLL ═══════════════════════════════
@@ -598,11 +621,14 @@ function onScroll() {
     img.style.transform = `translateY(${offset}px) scale(1.04)`;
   });
 
-  // Hero name parallax
+  // Hero name parallax (desktop only)
   const heroName = document.querySelector('.hero-name');
-  if (heroName) {
+  if (heroName && window.innerWidth >= 901) {
     heroName.style.transform = `translateY(${scrollY * 0.18}px)`;
     heroName.style.opacity = Math.max(0, 1 - scrollY / 600);
+  } else if (heroName) {
+    heroName.style.transform = '';
+    heroName.style.opacity = '';
   }
 }
 
