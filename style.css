@@ -1411,11 +1411,93 @@ footer {
   .num-block:first-child { border-top: none; }
 }
 
+/* ── Desktop hero layout (no overlap between CTAs & stats) ── */
+@media (min-width: 901px) {
+  #hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: clamp(3rem, 5vw, 7rem);
+    align-items: end;
+    padding-bottom: clamp(4rem, 7vh, 6.5rem);
+  }
+
+  .hero-content {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: clamp(1.75rem, 2.5vw, 2.75rem);
+    max-width: 38rem;
+  }
+
+  .hero-role {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .75rem;
+  }
+
+  .role-text {
+    font-size: clamp(.85rem, 1.1vw, 1.05rem);
+    letter-spacing: .1em;
+    max-width: 28rem;
+    line-height: 1.6;
+  }
+
+  .role-years {
+    font-size: clamp(2.75rem, 3.5vw, 4.25rem);
+  }
+
+  .hero-cta {
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    padding: 1rem 2.25rem;
+    font-size: .78rem;
+  }
+
+  .hero-stats {
+    position: static;
+    align-self: end;
+    gap: clamp(1.5rem, 2vw, 2.25rem);
+    min-width: 11rem;
+    padding-bottom: .25rem;
+  }
+
+  .hstat-n {
+    font-size: clamp(2.75rem, 3.5vw, 4.5rem);
+  }
+
+  .hstat-l {
+    font-size: clamp(.58rem, .7vw, .72rem);
+  }
+
+  .hero-tag {
+    font-size: clamp(.68rem, .85vw, .82rem);
+    margin-bottom: clamp(1.25rem, 2vw, 2rem);
+  }
+}
+
 /* ── Large desktops (27"+) ── */
 @media (min-width: 1440px) {
   .container { max-width: 1320px; }
   #nav { padding-left: clamp(2rem, 5vw, 4rem); padding-right: clamp(2rem, 5vw, 4rem); }
-  #hero { padding-left: clamp(2rem, 5vw, 4rem); padding-right: clamp(2rem, 5vw, 4rem); }
+  #hero {
+    padding-left: max(3rem, calc((100vw - 1320px) / 2 + 2rem));
+    padding-right: max(3rem, calc((100vw - 1320px) / 2 + 2rem));
+    column-gap: clamp(4rem, 6vw, 9rem);
+    min-height: 100svh;
+    padding-bottom: clamp(5rem, 8vh, 8rem);
+  }
+  .hero-meta { max-width: 48rem; gap: 3rem; }
+  .hero-name { font-size: clamp(5.5rem, 7.5vw, 14rem); }
+  .hero-stats { min-width: 13rem; }
   .about-grid { gap: 7rem; }
   .proj-featured { gap: 5rem; padding: 3.5rem; }
   .skills-grid { gap: 2rem; }
@@ -1425,24 +1507,43 @@ footer {
 @media (min-width: 1920px) {
   html { font-size: 17px; }
   .container { max-width: 1520px; }
-  .hero-name { font-size: clamp(6rem, 8vw, 18rem); }
+  #hero {
+    padding-left: max(3rem, calc((100vw - 1520px) / 2 + 2rem));
+    padding-right: max(3rem, calc((100vw - 1520px) / 2 + 2rem));
+  }
+  .hero-name { font-size: clamp(7rem, 8.5vw, 16rem); }
+  .hero-meta { max-width: 56rem; }
+  .role-text { font-size: 1.1rem; }
+  .role-years { font-size: 4.5rem; }
+  .btn-primary,
+  .btn-ghost {
+    padding: 1.15rem 2.75rem;
+    font-size: .85rem;
+  }
+  .hstat-n { font-size: 4.75rem; }
+  .hero-stats { min-width: 15rem; gap: 2.5rem; }
   .section-title { font-size: clamp(4rem, 5vw, 8rem); }
   .contact-title { font-size: clamp(5rem, 7vw, 12rem); }
   .skills-bg-word { font-size: clamp(12rem, 18vw, 28rem); }
   .num-value { font-size: clamp(5rem, 5vw, 8rem); }
-  .hero-stats { right: clamp(2rem, 5vw, 5rem); }
 }
 
 /* ── 4K / 36" ultrawide ── */
 @media (min-width: 2560px) {
   html { font-size: 18px; }
   .container { max-width: 1760px; }
-  #nav { padding-left: max(3rem, calc((100vw - 1760px) / 2)); padding-right: max(3rem, calc((100vw - 1760px) / 2)); }
-  #hero {
+  #nav {
     padding-left: max(3rem, calc((100vw - 1760px) / 2));
     padding-right: max(3rem, calc((100vw - 1760px) / 2));
   }
-  .hero-stats { right: max(3rem, calc((100vw - 1760px) / 2)); }
+  #hero {
+    padding-left: max(3rem, calc((100vw - 1760px) / 2));
+    padding-right: max(3rem, calc((100vw - 1760px) / 2));
+    column-gap: 10rem;
+  }
+  .hero-name { font-size: clamp(8rem, 9vw, 18rem); }
+  .hero-meta { max-width: 64rem; }
+  .hero-stats { min-width: 17rem; }
   .about-grid { gap: 8rem; }
   .proj-featured { gap: 6rem; }
   .skills-grid { grid-template-columns: repeat(3, 1fr); }
