@@ -14,7 +14,7 @@ const TRANSLATIONS = {
     hero_cta1: "Ver proyectos", hero_cta2: "Hablemos",
     hero_scroll: "scroll",
     stat_years: "años exp.", stat_projects: "empresas", stat_industries: "industrias",
-    m_games: "Videojuegos AAA", m_health: "Healthtech", m_ai: "Inteligencia Artificial", m_logistics: "Logística",
+    m_games: "Videojuegos", m_health: "Healthtech", m_ai: "Inteligencia Artificial", m_logistics: "Logística",
     m_agtech: "AgTech", m_iot: "IoT", m_banking: "Banca",
     m_enterprise: "Enterprise", m_cloud: "Cloud",
     about_label: "Sobre mí",
@@ -30,7 +30,7 @@ const TRANSLATIONS = {
     sk1_name: "Frontend Avanzado", sk2_name: "Backend & APIs",
     sk3_name: "AI / ML Engineering", sk4_name: "Cloud & DevOps",
     sk5_name: "IoT & Tiempo Real", sk6_name: "Datos & Persistencia",
-    chip_gaming: "🎮 Gaming AAA",
+    chip_gaming: "Gaming",
     exp_label: "Trayectoria profesional",
     exp_title: "10+ años.", exp_title2: "7 industrias.",
     present: "Presente",
@@ -49,23 +49,21 @@ const TRANSLATIONS = {
     exp7_role: "FullStack Developer",
     exp7_desc: 'Proyectos de innovación IoT para movilidad inteligente y monitoreo ambiental. Dashboards predictivos con ML, APIs y sistemas web/mobile integrando datos de sensores.',
     badge_bank: "🏦 Banca", badge_ai: "🤖 AI / Ventures", badge_logistics: "🚚 Logística",
-    badge_agtech: "🌾 AgTech", badge_iot: "📡 IoT", badge_health: "🏥 Healthtech", badge_game: "🎮 Gaming AAA",
-    gaming_label: "Industria AAA",
-    gaming_title: "Gaming.", gaming_title2: "Escala de guerra.",
-    gaming_live: "LIVE OPS · MULTIPLAYER",
-    gaming_franchise: "CALL OF DUTY",
-    gaming_studio: "Activision · Santa Monica, California",
-    gaming_headline: "Colaborador en el desarrollo del último Call of Duty",
-    gaming_desc: "Contribuí a la capa online y servicios en tiempo real del lanzamiento más reciente de la franquicia: arquitectura de sesiones, matchmaking, progresión de jugadores, telemetría de combate y pipelines de despliegue para temporadas globales — donde cada milisegundo y cada crash en producción se sienten en millones de partidas.",
-    gm1: "Jugadores globales", gm2: "Target de latencia", gm3: "Live ops & seasons",
+    badge_agtech: "🌾 AgTech", badge_iot: "📡 IoT", badge_health: "🏥 Healthtech", badge_game: "🎮 Gaming",
+    gaming_label: "Videojuegos",
+    gaming_title: "Gaming.", gaming_title2: "Online a escala global.",
+    gaming_badge: "🎮 Gaming · Call of Duty",
+    gaming_headline: "Call of Duty — Latest Title Development",
+    gaming_desc: "Colaboré en el desarrollo del último título de Call of Duty desde Activision, Santa Monica. Sistemas online de baja latencia, matchmaking, progresión de jugadores, telemetría de combate y pipelines de despliegue para temporadas globales.",
+    gm1: "jugadores", gm2: "latencia", gm3: "live ops",
     gc1_title: "Netcode & Matchmaking",
-    gc1_desc: "Servicios de emparejamiento, regiones, skill brackets y resiliencia ante picos de lanzamiento.",
+    gc1_desc: "Emparejamiento por región, skill brackets y resiliencia ante picos de lanzamiento.",
     gc2_title: "Live Ops Pipeline",
-    gc2_desc: "Despliegues de temporadas, balanceo remoto, feature flags y rollback sin downtime.",
+    gc2_desc: "Despliegues de temporadas, feature flags y rollback sin downtime.",
     gc3_title: "Combat Telemetry",
-    gc3_desc: "Ingesta de eventos de partida, anti-cheat signals y dashboards para equipos de gameplay.",
+    gc3_desc: "Ingesta de eventos de partida y dashboards para equipos de gameplay.",
     gc4_title: "Progression Systems",
-    gc4_desc: "Loadouts, battle pass logic, economía in-game y APIs de progresión cross-platform.",
+    gc4_desc: "Loadouts, battle pass, economía in-game y APIs cross-platform.",
     proj_label: "Proyectos destacados",
     proj_title: "Código que", proj_title2: "mueve el mundo.",
     pf1_badge: "AI · Forecasting · ML",
@@ -102,7 +100,7 @@ const TRANSLATIONS = {
     hero_cta1: "View projects", hero_cta2: "Let's talk",
     hero_scroll: "scroll",
     stat_years: "yrs exp.", stat_projects: "companies", stat_industries: "industries",
-    m_games: "AAA Video Games", m_health: "Healthtech", m_ai: "Artificial Intelligence", m_logistics: "Logistics",
+    m_games: "Video Games", m_health: "Healthtech", m_ai: "Artificial Intelligence", m_logistics: "Logistics",
     m_agtech: "AgTech", m_iot: "IoT", m_banking: "Banking",
     m_enterprise: "Enterprise", m_cloud: "Cloud",
     about_label: "About me",
@@ -118,7 +116,7 @@ const TRANSLATIONS = {
     sk1_name: "Advanced Frontend", sk2_name: "Backend & APIs",
     sk3_name: "AI / ML Engineering", sk4_name: "Cloud & DevOps",
     sk5_name: "IoT & Real-time", sk6_name: "Data & Persistence",
-    chip_gaming: "🎮 AAA Gaming",
+    chip_gaming: "Gaming",
     exp_label: "Career timeline",
     exp_title: "10+ years.", exp_title2: "7 industries.",
     present: "Present",
@@ -137,23 +135,21 @@ const TRANSLATIONS = {
     exp7_role: "FullStack Developer",
     exp7_desc: 'IoT innovation projects for smart mobility and environmental monitoring. Predictive dashboards with ML, APIs and web/mobile systems integrating sensor data.',
     badge_bank: "🏦 Banking", badge_ai: "🤖 AI / Ventures", badge_logistics: "🚚 Logistics",
-    badge_agtech: "🌾 AgTech", badge_iot: "📡 IoT", badge_health: "🏥 Healthtech", badge_game: "🎮 AAA Gaming",
-    gaming_label: "AAA Industry",
-    gaming_title: "Gaming.", gaming_title2: "War-scale systems.",
-    gaming_live: "LIVE OPS · MULTIPLAYER",
-    gaming_franchise: "CALL OF DUTY",
-    gaming_studio: "Activision · Santa Monica, California",
-    gaming_headline: "Collaborator on the latest Call of Duty development",
-    gaming_desc: "Contributed to the online layer and real-time services of the franchise's most recent release: session architecture, matchmaking, player progression, combat telemetry and deployment pipelines for global seasons — where every millisecond and every production crash is felt across millions of matches.",
-    gm1: "Global players", gm2: "Latency target", gm3: "Live ops & seasons",
+    badge_agtech: "🌾 AgTech", badge_iot: "📡 IoT", badge_health: "🏥 Healthtech", badge_game: "🎮 Gaming",
+    gaming_label: "Video Games",
+    gaming_title: "Gaming.", gaming_title2: "Global-scale online.",
+    gaming_badge: "🎮 Gaming · Call of Duty",
+    gaming_headline: "Call of Duty — Latest Title Development",
+    gaming_desc: "Collaborated on the latest Call of Duty title at Activision, Santa Monica. Low-latency online systems, matchmaking, player progression, combat telemetry and deployment pipelines for global seasons.",
+    gm1: "players", gm2: "latency", gm3: "live ops",
     gc1_title: "Netcode & Matchmaking",
-    gc1_desc: "Matchmaking services, regions, skill brackets and resilience during launch spikes.",
+    gc1_desc: "Region-based matchmaking, skill brackets and launch spike resilience.",
     gc2_title: "Live Ops Pipeline",
-    gc2_desc: "Season deployments, remote balancing, feature flags and zero-downtime rollback.",
+    gc2_desc: "Season deployments, feature flags and zero-downtime rollback.",
     gc3_title: "Combat Telemetry",
-    gc3_desc: "Match event ingestion, anti-cheat signals and dashboards for gameplay teams.",
+    gc3_desc: "Match event ingestion and dashboards for gameplay teams.",
     gc4_title: "Progression Systems",
-    gc4_desc: "Loadouts, battle pass logic, in-game economy and cross-platform progression APIs.",
+    gc4_desc: "Loadouts, battle pass, in-game economy and cross-platform APIs.",
     proj_label: "Featured projects",
     proj_title: "Code that", proj_title2: "moves the world.",
     pf1_badge: "AI · Forecasting · ML",
@@ -241,7 +237,7 @@ document.addEventListener('mousemove', e => {
   requestAnimationFrame(trailLoop);
 })();
 
-const hoverEls = 'a, button, .skill-card, .proj-card, .proj-card-sm, .proj-featured, .ac, .pillar, .chip, .tl-item, .gaming-card, .gaming-showcase';
+const hoverEls = 'a, button, .skill-card, .proj-card, .proj-card-sm, .proj-featured, .ac, .pillar, .chip, .tl-item';
 document.querySelectorAll(hoverEls).forEach(el => {
   el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
   el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
@@ -580,7 +576,7 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll(
-  '.reveal-up, .reveal-left, .reveal-right, .tl-item, .skill-card, .about-card-featured, .gaming-showcase, .gaming-card'
+  '.reveal-up, .reveal-left, .reveal-right, .tl-item, .skill-card, .about-card-featured'
 ).forEach(el => revealObserver.observe(el));
 
 // Also observe skill cards for meter animation
