@@ -7,21 +7,21 @@
 const TRANSLATIONS = {
   es: {
     nav_about: "Sobre mí", nav_skills: "Skills",
-    nav_experience: "Experiencia", nav_projects: "Proyectos", nav_contact: "Contacto",
+    nav_experience: "Experiencia", nav_gaming: "Gaming", nav_projects: "Proyectos", nav_contact: "Contacto",
     hero_available: "Disponible para proyectos",
     hero_role: "Fullstack Technical Lead",
     hero_years: "años",
     hero_cta1: "Ver proyectos", hero_cta2: "Hablemos",
     hero_scroll: "scroll",
     stat_years: "años exp.", stat_projects: "empresas", stat_industries: "industrias",
-    m_health: "Healthtech", m_ai: "Inteligencia Artificial", m_logistics: "Logística",
+    m_games: "Videojuegos AAA", m_health: "Healthtech", m_ai: "Inteligencia Artificial", m_logistics: "Logística",
     m_agtech: "AgTech", m_iot: "IoT", m_banking: "Banca",
     m_enterprise: "Enterprise", m_cloud: "Cloud",
     about_label: "Sobre mí",
     about_title1: "El ingeniero que",
     about_title2: "construye lo imposible.",
-    about_p1: 'Soy <strong>Alejandro Polanco Andrade</strong>, Fullstack Technical Lead con más de 10 años construyendo productos en healthtech, logística, agtech, banca e IoT — desde Colombia hasta Alemania, EE.UU. y Chile.',
-    about_p2: 'Lidero equipos multiculturales, diseño arquitecturas con React, Next.js y TypeScript, e integro IA en producción: LLMs para QA, dashboards predictivos, pipelines ML e IoT en tiempo real.',
+    about_p1: 'Soy <strong>Alejandro Polanco Andrade</strong>, Fullstack Technical Lead con más de 10 años construyendo productos en healthtech, logística, agtech, banca, gaming AAA e IoT — desde Colombia hasta Alemania, EE.UU. y Chile.',
+    about_p2: 'Lidero equipos multiculturales, diseño arquitecturas con React, Next.js y TypeScript, e integro IA en producción. También he contribuido a sistemas online de escala masiva en la industria de <strong>videojuegos AAA</strong>.',
     about_p3: 'Mi enfoque: estándares de ingeniería sólidos, entregas consistentes y sistemas que escalan sin drama — porque el mejor código es el que el equipo puede mantener y el negocio puede confiar.',
     acf_tag: "// Perfil técnico",
     acf_s1: "Años liderando equipos", acf_s2: "Países en los que he trabajado", acf_s3: "Industrias",
@@ -30,8 +30,9 @@ const TRANSLATIONS = {
     sk1_name: "Frontend Avanzado", sk2_name: "Backend & APIs",
     sk3_name: "AI / ML Engineering", sk4_name: "Cloud & DevOps",
     sk5_name: "IoT & Tiempo Real", sk6_name: "Datos & Persistencia",
+    chip_gaming: "🎮 Gaming AAA",
     exp_label: "Trayectoria profesional",
-    exp_title: "10+ años.", exp_title2: "6 industrias.",
+    exp_title: "10+ años.", exp_title2: "7 industrias.",
     present: "Presente",
     exp1_role: "Fullstack Technical Lead",
     exp1_desc: 'Lideré un equipo cross-functional multicultural en Alemania. Arquitecturas escalables con <strong>React, Next.js y TypeScript</strong>. Definí estándares de calidad, code review y workflows con <strong>LLMs</strong> para QA, documentación y validación de componentes.',
@@ -41,12 +42,30 @@ const TRANSLATIONS = {
     exp3_desc: 'Plataformas con soluciones de IA y insights basados en ML. <strong>Micro frontends</strong> conectados a motores predictivos. Features para sistemas bancarios IoT y notificaciones inteligentes.',
     exp4_role: "Software Engineer",
     exp4_desc: 'Integré modelos ML para predecir patrones logísticos y consumo de combustible. Dashboards con datos IoT de <strong>GPS, sensores y telemática</strong>. Microservicios para analizar outputs de ML en tiempo real.',
-    exp5_role: "FullStack Developer",
-    exp5_desc: 'Herramientas con modelos ML para productividad agrícola y analítica rural. Dashboards con datos de <strong>sensores IoT de campo</strong>. Automatizaciones con IA para análisis documental.',
+    exp5_role: "Software Engineer · Online & Multiplayer Systems",
+    exp5_desc: 'Colaboré en el desarrollo del último título de <strong>Call of Duty</strong> desde Santa Monica, California. Sistemas online de baja latencia, pipelines de matchmaking, servicios de progresión y herramientas internas para equipos de live ops — arquitectura pensada para <strong>millones de sesiones concurrentes</strong> en lanzamiento global.',
     exp6_role: "FullStack Developer",
-    exp6_desc: 'Proyectos de innovación IoT para movilidad inteligente y monitoreo ambiental. Dashboards predictivos con ML, APIs y sistemas web/mobile integrando datos de sensores.',
+    exp6_desc: 'Herramientas con modelos ML para productividad agrícola y analítica rural. Dashboards con datos de <strong>sensores IoT de campo</strong>. Automatizaciones con IA para análisis documental.',
+    exp7_role: "FullStack Developer",
+    exp7_desc: 'Proyectos de innovación IoT para movilidad inteligente y monitoreo ambiental. Dashboards predictivos con ML, APIs y sistemas web/mobile integrando datos de sensores.',
     badge_bank: "🏦 Banca", badge_ai: "🤖 AI / Ventures", badge_logistics: "🚚 Logística",
-    badge_agtech: "🌾 AgTech", badge_iot: "📡 IoT", badge_health: "🏥 Healthtech",
+    badge_agtech: "🌾 AgTech", badge_iot: "📡 IoT", badge_health: "🏥 Healthtech", badge_game: "🎮 Gaming AAA",
+    gaming_label: "Industria AAA",
+    gaming_title: "Gaming.", gaming_title2: "Escala de guerra.",
+    gaming_live: "LIVE OPS · MULTIPLAYER",
+    gaming_franchise: "CALL OF DUTY",
+    gaming_studio: "Activision · Santa Monica, California",
+    gaming_headline: "Colaborador en el desarrollo del último Call of Duty",
+    gaming_desc: "Contribuí a la capa online y servicios en tiempo real del lanzamiento más reciente de la franquicia: arquitectura de sesiones, matchmaking, progresión de jugadores, telemetría de combate y pipelines de despliegue para temporadas globales — donde cada milisegundo y cada crash en producción se sienten en millones de partidas.",
+    gm1: "Jugadores globales", gm2: "Target de latencia", gm3: "Live ops & seasons",
+    gc1_title: "Netcode & Matchmaking",
+    gc1_desc: "Servicios de emparejamiento, regiones, skill brackets y resiliencia ante picos de lanzamiento.",
+    gc2_title: "Live Ops Pipeline",
+    gc2_desc: "Despliegues de temporadas, balanceo remoto, feature flags y rollback sin downtime.",
+    gc3_title: "Combat Telemetry",
+    gc3_desc: "Ingesta de eventos de partida, anti-cheat signals y dashboards para equipos de gameplay.",
+    gc4_title: "Progression Systems",
+    gc4_desc: "Loadouts, battle pass logic, economía in-game y APIs de progresión cross-platform.",
     proj_label: "Proyectos destacados",
     proj_title: "Código que", proj_title2: "mueve el mundo.",
     pf1_badge: "AI · Forecasting · ML",
@@ -76,21 +95,21 @@ const TRANSLATIONS = {
   },
   en: {
     nav_about: "About", nav_skills: "Skills",
-    nav_experience: "Experience", nav_projects: "Projects", nav_contact: "Contact",
+    nav_experience: "Experience", nav_gaming: "Gaming", nav_projects: "Projects", nav_contact: "Contact",
     hero_available: "Available for projects",
     hero_role: "Fullstack Technical Lead",
     hero_years: "years",
     hero_cta1: "View projects", hero_cta2: "Let's talk",
     hero_scroll: "scroll",
     stat_years: "yrs exp.", stat_projects: "companies", stat_industries: "industries",
-    m_health: "Healthtech", m_ai: "Artificial Intelligence", m_logistics: "Logistics",
+    m_games: "AAA Video Games", m_health: "Healthtech", m_ai: "Artificial Intelligence", m_logistics: "Logistics",
     m_agtech: "AgTech", m_iot: "IoT", m_banking: "Banking",
     m_enterprise: "Enterprise", m_cloud: "Cloud",
     about_label: "About me",
     about_title1: "The engineer who",
     about_title2: "builds the impossible.",
-    about_p1: 'I am <strong>Alejandro Polanco Andrade</strong>, a Fullstack Technical Lead with 10+ years building products across healthtech, logistics, agtech, banking and IoT — from Colombia to Germany, the U.S. and Chile.',
-    about_p2: 'I lead multicultural teams, design architectures with React, Next.js and TypeScript, and integrate AI in production: LLMs for QA, predictive dashboards, ML pipelines and real-time IoT.',
+    about_p1: 'I am <strong>Alejandro Polanco Andrade</strong>, a Fullstack Technical Lead with 10+ years building products across healthtech, logistics, agtech, banking, AAA gaming and IoT — from Colombia to Germany, the U.S. and Chile.',
+    about_p2: 'I lead multicultural teams, design architectures with React, Next.js and TypeScript, and integrate AI in production. I have also contributed to massive-scale online systems in the <strong>AAA gaming</strong> industry.',
     about_p3: 'My focus: solid engineering standards, consistent delivery and systems that scale without drama — because the best code is what the team can maintain and the business can trust.',
     acf_tag: "// Technical profile",
     acf_s1: "Years leading teams", acf_s2: "Countries worked in", acf_s3: "Industries",
@@ -99,8 +118,9 @@ const TRANSLATIONS = {
     sk1_name: "Advanced Frontend", sk2_name: "Backend & APIs",
     sk3_name: "AI / ML Engineering", sk4_name: "Cloud & DevOps",
     sk5_name: "IoT & Real-time", sk6_name: "Data & Persistence",
+    chip_gaming: "🎮 AAA Gaming",
     exp_label: "Career timeline",
-    exp_title: "10+ years.", exp_title2: "6 industries.",
+    exp_title: "10+ years.", exp_title2: "7 industries.",
     present: "Present",
     exp1_role: "Fullstack Technical Lead",
     exp1_desc: 'Led a cross-functional multicultural team in Germany. Scalable architectures with <strong>React, Next.js and TypeScript</strong>. Defined quality standards, code review and <strong>LLM-powered</strong> workflows for QA, documentation and component validation.',
@@ -110,12 +130,30 @@ const TRANSLATIONS = {
     exp3_desc: 'Platforms integrating AI solutions and ML-based insights. <strong>Micro frontends</strong> connected to predictive engines. Features for IoT-enabled banking systems and smart notifications.',
     exp4_role: "Software Engineer",
     exp4_desc: 'Integrated ML models to predict logistics patterns and fuel usage. Dashboards consuming IoT data from <strong>GPS, sensors and telematics</strong>. Microservices analyzing ML outputs in real time.',
-    exp5_role: "FullStack Developer",
-    exp5_desc: 'Tools integrating ML models for agricultural productivity and rural analytics. Dashboards rendering insights from <strong>field IoT sensors</strong>. AI-powered document analysis automations.',
+    exp5_role: "Software Engineer · Online & Multiplayer Systems",
+    exp5_desc: 'Collaborated on the development of the latest <strong>Call of Duty</strong> title from Santa Monica, California. Low-latency online systems, matchmaking pipelines, progression services and internal live ops tooling — architecture built for <strong>millions of concurrent sessions</strong> at global launch.',
     exp6_role: "FullStack Developer",
-    exp6_desc: 'IoT innovation projects for smart mobility and environmental monitoring. Predictive dashboards with ML, APIs and web/mobile systems integrating sensor data.',
+    exp6_desc: 'Tools integrating ML models for agricultural productivity and rural analytics. Dashboards rendering insights from <strong>field IoT sensors</strong>. AI-powered document analysis automations.',
+    exp7_role: "FullStack Developer",
+    exp7_desc: 'IoT innovation projects for smart mobility and environmental monitoring. Predictive dashboards with ML, APIs and web/mobile systems integrating sensor data.',
     badge_bank: "🏦 Banking", badge_ai: "🤖 AI / Ventures", badge_logistics: "🚚 Logistics",
-    badge_agtech: "🌾 AgTech", badge_iot: "📡 IoT", badge_health: "🏥 Healthtech",
+    badge_agtech: "🌾 AgTech", badge_iot: "📡 IoT", badge_health: "🏥 Healthtech", badge_game: "🎮 AAA Gaming",
+    gaming_label: "AAA Industry",
+    gaming_title: "Gaming.", gaming_title2: "War-scale systems.",
+    gaming_live: "LIVE OPS · MULTIPLAYER",
+    gaming_franchise: "CALL OF DUTY",
+    gaming_studio: "Activision · Santa Monica, California",
+    gaming_headline: "Collaborator on the latest Call of Duty development",
+    gaming_desc: "Contributed to the online layer and real-time services of the franchise's most recent release: session architecture, matchmaking, player progression, combat telemetry and deployment pipelines for global seasons — where every millisecond and every production crash is felt across millions of matches.",
+    gm1: "Global players", gm2: "Latency target", gm3: "Live ops & seasons",
+    gc1_title: "Netcode & Matchmaking",
+    gc1_desc: "Matchmaking services, regions, skill brackets and resilience during launch spikes.",
+    gc2_title: "Live Ops Pipeline",
+    gc2_desc: "Season deployments, remote balancing, feature flags and zero-downtime rollback.",
+    gc3_title: "Combat Telemetry",
+    gc3_desc: "Match event ingestion, anti-cheat signals and dashboards for gameplay teams.",
+    gc4_title: "Progression Systems",
+    gc4_desc: "Loadouts, battle pass logic, in-game economy and cross-platform progression APIs.",
     proj_label: "Featured projects",
     proj_title: "Code that", proj_title2: "moves the world.",
     pf1_badge: "AI · Forecasting · ML",
@@ -161,7 +199,7 @@ function applyLang(lang) {
   });
 
   // Update marquee (rebuild duplicate for seamless loop)
-  const keys = ['m_health','m_ai','m_logistics','m_agtech','m_iot','m_banking','m_enterprise','m_cloud'];
+  const keys = ['m_games','m_health','m_ai','m_logistics','m_agtech','m_iot','m_banking','m_enterprise','m_cloud'];
   const items = keys.map(k => dict[k]);
   const mi = document.getElementById('marquee-inner');
   if (mi) {
@@ -203,7 +241,7 @@ document.addEventListener('mousemove', e => {
   requestAnimationFrame(trailLoop);
 })();
 
-const hoverEls = 'a, button, .skill-card, .proj-card, .proj-card-sm, .proj-featured, .ac, .pillar, .chip, .tl-item';
+const hoverEls = 'a, button, .skill-card, .proj-card, .proj-card-sm, .proj-featured, .ac, .pillar, .chip, .tl-item, .gaming-card, .gaming-showcase';
 document.querySelectorAll(hoverEls).forEach(el => {
   el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
   el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
@@ -542,7 +580,7 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll(
-  '.reveal-up, .reveal-left, .reveal-right, .tl-item, .skill-card, .about-card-featured'
+  '.reveal-up, .reveal-left, .reveal-right, .tl-item, .skill-card, .about-card-featured, .gaming-showcase, .gaming-card'
 ).forEach(el => revealObserver.observe(el));
 
 // Also observe skill cards for meter animation
